@@ -5,19 +5,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int k = sc.nextInt();
-
-        int[] score = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            score[i] = sc.nextInt();
-        }
-
         int count = 0;
-        int kthScore = score[k - 1];
 
         for (int i = 0; i < n; i++) {
-            if (score[i] >= kthScore && score[i] > 0) {
+            int p = sc.nextInt();
+            int v = sc.nextInt();
+            int t = sc.nextInt();
+
+            if (p + v + t >= 2) {
                 count++;
             }
         }
